@@ -1,0 +1,392 @@
+@charset "UTF-8";
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset, img, input, button { 			/*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;				/*清除列表风格*/
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+
+select, input {
+    vertical-align: middle;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*防止多行文本框拖动*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙*/
+table {
+    border-collapse: collapse;			/*合并外边线*/
+}
+
+
+body {
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53";	/*宋体，Unicode，统一码*/
+    color: #666;
+    background: #fff
+}
+
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C81623;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+s, i, em {				
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-red {
+    color: #C81623 !important;
+}
+
+/*公共类*/
+.w {
+    /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.al {
+    text-align: left
+}
+
+.ac {
+    text-align: center
+}
+
+.ar {
+    text-align: right
+}
+
+.hide {
+    display: none
+}
+/* main主体部分开始 */
+.main {
+    background-color: #f1f3f0;
+}
+.main-showpic{
+    float: left;
+    width: 1001px;
+    height: 511px;
+    overflow: hidden;       
+}
+.main-showpic a {
+    position: relative;
+    display: block;
+    float: left;
+    width: 591px;
+    height: 472px;
+    margin-top: 8px;
+    margin-left: 201px;
+}
+.arrow {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -20px;
+}
+.arrow i{
+    float: right;
+    width: 24px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+i.arrow-left {
+    float: left;
+}
+.arrow i:hover {
+    background-color:rgba(0, 0, 0, 0.4);
+}
+.choose-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left:-66px;
+    margin-bottom: 10px;
+
+}
+.choose-button li {
+    float: left;
+    width: 18px;
+    height: 18px;
+    margin  : 0 2px;
+    border-radius: 50%; 
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font: 400 15px/18px "microsoft";
+    color: #fff;
+
+}
+.choose-button li:hover {
+    background-color: rgba(0, 0, 0, 0.8s);
+}
+/* .main-showpic .main-showpic-common a  
+这个选择器是不对的，.main-showpic-common与
+a是同级的，即.main-showpic-common
+指的就是a，所以要写成a.main-showpic-common    */
+.main-showpic a.main-showpic-common {
+    display: block;
+    float: right;
+    width: 190px;
+    height: 152px;
+    margin-left: 10px;
+    margin-top: 10px;
+
+}
+.main-expand {
+    float: right;
+    width: 190px;
+    height: 480px;
+}
+.main-expand-user {
+    width: 190px;
+    height: 160px;
+    background-color: #fff;
+}
+.main-expand-user-top {
+    position: relative;
+    width: 190px;
+    height: 75px;
+    margin-top: 10px;
+    /* top: 10px; */
+}
+.main-expand-user-top a {
+    position: relative;
+    z-index: 0; 
+    display: block;
+    width: 65px;
+    height: 75px;
+    top: -10px;
+    left: 61px;
+}
+.main-expand-user-top img{
+    position: absolute;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    top: -10px;
+    left: 50%;
+    /* overflow: hidden; */
+    margin-left: -32.5px;
+
+
+}
+.main-expand-user-bottom {
+    position: relative;
+    height: 75px;
+    /* background-color: #fff; */
+}
+.main-expand-user-bottom h3 a{
+    font: 400 14px/20px "microsoft";
+    height: 20px;
+    color: #888;
+}
+.main-expand-user-bottom h3 {
+    text-align: center;
+}
+.main-expand-user-bottom-login_reg {
+    text-align: center;
+}
+.main-expand-user-bottom-login_reg a {
+    height: 20px;
+    color:#888;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 2px; 
+}
+.main-expand-user-bottom-login_reg a:hover {
+    color: #C81623;
+}
+.button {
+    margin-top: 10px;
+}
+.button a{
+    display: inline-block;
+    width: 75px;
+    height: 25px;
+    font: 400 12px/25px "microsoft";
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 13px;
+}
+.button-left {
+    color: #e43f3b;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+.button-right {
+    color: #e5d790;
+    background: #363634;
+    
+}
+a.button-left:hover {
+    background-color:#e43f3b;
+    color: #fff;
+}
+a.button-right:hover {
+    background-color:#e43f3b;
+    color: #fff;    
+}
+.main-expand-news {
+    position: relative;
+    background-color: #fff;
+    width: 190px;
+    height: 150px;
+}
+.main-expand-news-tab {
+    padding-top: 12px;
+}
+.main-expand-news-tab a {
+    font-size: 12px;
+    color: #333;
+    padding: 0 15px;
+    border-right: 1px solid #dfe0e1;
+}
+.main-expand-news-tab a.more {
+    padding-left: 34px;
+    border-right: 0;
+}
+ a.more:hover {
+     color:  #C81623;
+ }
+ a.tab:hover {
+    border-bottom: 2px solid red;
+    border-radius: 6px;
+ }
+.main-expand-news-content {
+    margin: 0 15px;
+    padding-top: 12px;
+}
+.main-expand-news-content li {
+    line-height: 22px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.main-expand-service ul {
+    background-color: #fff;
+    width: 160px;
+    height: 135px;
+    padding: 9px 15px 15px 15px;
+    border-top: 1px solid #f1f3f0;   
+}
+.main-expand-service a {
+    display: block;
+    width: 40px;
+    height: 45px;
+    float: left;
+    position: relative;
+}
+.main-expand-service i{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    margin: 0 8px 20px 8px;
+}
+.main-expand-service a:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.service1 i{     
+    background: url("../image/service.png") no-repeat 0 -42px;
+}
+.service2 i{     
+    background: url("../image/service.png") no-repeat -29px -42px;
+}
+.service3 i{     
+    background: url("../image/service.png") no-repeat -58px -42px;
+}
+.service4 i{     
+    background: url("../image/service.png") no-repeat -87px -42px;
+}
+.service5 i{     
+    background: url("../image/service.png") no-repeat -116px -42px;
+}
+.service6 i{     
+    background: url("../image/service.png") no-repeat -145px -42px;
+
+}
+.service7 i{     
+    background: url("../image/service.png") no-repeat -174px -42px;
+}
+.service8 i{     
+    background: url("../image/service.png") no-repeat 0 -72px;
+}
+.service9 i{     
+    background: url("../image/service.png") no-repeat -29px -72px;
+}
+.service10 i{     
+    background: url("../image/service.png") no-repeat -58px -72px;
+}
+.service11 i{     
+    background: url("../image/service.png") no-repeat -87px -72px;
+}
+.service12 i{     
+    background: url("../image/service.png") no-repeat -116px -72px;
+}
+
+
+
+
